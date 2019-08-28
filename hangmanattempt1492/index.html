@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          <link href="style.css" rel="stylesheet" type="text/css"> 
+          <!-- <script type="text/javascript"> -->
+           <!-- <link href="javahangman.js" ref="javahangman" type="text/js"> -->
+           <!-- <script type="text/javascript" src="assets/javascript/game.js"></script> -->
+    </head>
+      
+    <body> 
+    <header>
+    <h1>Hangman Game</h1>
+    <br>
+    <h3>Guess My Favorite Flowers</h3>
+    </header>
+<br>
+<br>
+<br>
+
+    <div class="container">
+    
+    <div class="underscore"></div>
+   <br> 
+    <div class="rightGuess">Correct!</div>
+    <br>
+    <div class="wrongGuess">Nope!</div>
+
+<body>
+<script>
+//make the Array
+var words = ["dahlia", "hydrangea", "daisies", "roses", "mums", "coneflower", "primrose", "hosta", "lavender","columbine", "plumeria"];
+
+//choose a random word
+var word = words[Math.floor(Math.random() * words.length)];
+
+//make the answer array to show number of letters using _'s
+
+
+var answerArray =[];
+for (var i =0; i< word.length; i++)
+{
+    answerArray [i] ="_";
+}
+
+//create a variable that indicates the length of the word
+var remainingLetter =  word.length;
+
+
+while (remainingLetters> 0){
+//add alert
+
+alert(answerArray.join(" "));
+
+//prompt for guess
+var guess= prompt("Guess a letter, or click Cancel to stop playing");
+
+//conditions of guessing
+ //if guess is to stop playing
+ if (guess ==null) {
+     break;
+ }else if (guess.length !== 1) {
+//ask for only a single letter
+alert("Please enter a letter")
+ }
+//correct guess? update game with a j use a different letter
+else {
+for (var j = 0; j < word.length; j++) {
+    if (word [j] === guess) {
+//then update the answer array
+answerArray [j]=guess;
+// subtract a guess
+remainingLetter--;
+}
+
+}
+
+}
+//end of the game loop
+
+//reveal word
+alert(answerArray.join(" "));
+ 
+alert("You are Awesome! The answer is" + word) ;
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

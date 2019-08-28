@@ -1,0 +1,37 @@
+header {
+border: 1px solid;
+padding: 1px;
+box-shadow: 1px 5px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+text-align: center;
+margin: 0%;
+height: 150;
+width: 75;
+}
+.underscore {    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    text-align: center;
+    margin: 60px;
+    height: 150;
+    width: 80;
+}
+.rightGuess {    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:green;
+    text-align: center;
+    margin: 50px
+    height: 150;
+    width: 80;
+}
+.wrongGuess {    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: red;
+    text-align: center;
+    margin: 50px;
+    height: 150;
+    width: 80;
+}
